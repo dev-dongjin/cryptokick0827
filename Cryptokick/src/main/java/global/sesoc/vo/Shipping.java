@@ -1,17 +1,17 @@
 package global.sesoc.vo;
 
-public class shipping {
+public class Shipping {
 		
 		private int shipping_num;
 		private int product_num;
 		private String shipping_country;
 		private int shipping_price;
 		
-		public shipping() {
+		public Shipping() {
 			// TODO Auto-generated constructor stub
 		}
 
-		public shipping(int shipping_num, int product_num, String shipping_country, int shipping_price) {
+		public Shipping(int shipping_num, int product_num, String shipping_country, int shipping_price) {
 			super();
 			this.shipping_num = shipping_num;
 			this.product_num = product_num;

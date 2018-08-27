@@ -50,6 +50,8 @@ public class MemberController {
 	//일반회원 가입
 	@RequestMapping(value="/memberSignIn", method=RequestMethod.POST)
 	public String memberSignIn(MultipartFile upload, WebMember member,HttpSession session) {
+
+		System.out.println(member);
 		if(upload.getOriginalFilename() !="") {
 
 			String savedfile = FileService.saveFile(upload,uploadPath);

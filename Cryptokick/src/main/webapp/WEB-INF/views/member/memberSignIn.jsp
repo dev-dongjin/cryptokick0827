@@ -388,7 +388,7 @@ span#idcheck {
             <option data-title="Vietnam" value="Vietnam">Vietnam</option></select>
 								</div>
 								<div class="form-group">
-									<label>State/ Province/Region</label> <input name="state" type="text" placeholder="North Carolina"
+									<label>State/ Province/Region</label> <input name="province" type="text" placeholder="North Carolina"
 										class="form-control">
 								</div>
 								<div class="form-group">

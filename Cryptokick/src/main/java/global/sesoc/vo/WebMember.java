@@ -140,11 +140,11 @@ public class WebMember{
 			this.country = country;
 		}
 
-		public String getState() {
+		public String getProvince() {
 			return province;
 		}
 
-		public void setState(String province) {
+		public void setProvince(String province) {
 			this.province = province;
 		}
 

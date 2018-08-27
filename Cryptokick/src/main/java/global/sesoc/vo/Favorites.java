@@ -1,14 +1,14 @@
 package global.sesoc.vo;
 
-public class favorites {
+public class Favorites {
 		private int product_num;
 		private String userid;
 		
-		public favorites() {
+		public Favorites() {
 			// TODO Auto-generated constructor stub
 		}
 
-		public favorites(int product_num, String userid) {
+		public Favorites(int product_num, String userid) {
 			super();
 			this.product_num = product_num;
 			this.userid = userid;

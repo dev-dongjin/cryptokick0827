@@ -401,7 +401,7 @@ $(function(){
 							</div>
 							<div class="col-sm-5">
 								<div class="form-group">
-									<label>State/ Province/Region :</label> <input name="co_state" placeholder="North Carolina"
+									<label>State/ Province/Region :</label> <input name="co_province" placeholder="North Carolina"
 										type="text" class="form-control">
 								</div>
 								<div class="form-group">
