@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- SQL -->
+<mapper namespace="global.sesoc.dao.ProductMapper">
+
+  <select id="selectAll" parameterType="Product" resultType="Product">
+  		select * 
+  		from 
+  		(select rownum rnum, product_num, product_name, product_title, product_content, product_nowfundprice, product_goalfundprice,
+  		product_startdate, To_char(product_goaldate, 'MM-dd') product_goaldate, product_hitcount, product_category, product_video, co_id, product_coverImage
+  		 from product 
+  		 <if test="product_category != null || product_name != null">
+  		 where
+  		 </if>
+  		 <if test="product_category != null">
+  		 product_category=#{product_category}
+  		 <if test="product_category != null and product_name != null">
+  			and  
+  		 </if>
+  		 </if>
+  		 <if test="product_name !=null"> 
+    		<bind name="search" value="'%' + product_name + '%'" />
+  		( lower(product_name) like #{search} or lower(product_title) like #{search})
+  		</if>
+  		 <if test="product_content != null">
+  		 order by 
+  		 <choose>
+  		 	<when test = "product_content eq 'Newest'">
+  		 		product_startdate desc
+  		 	</when>
+  		 	<when test = "product_content eq 'Popularity'">
+  		 		product_hitcount desc
+  		 	</when>
+  		 	<when test = "product_content eq 'End Date'">
+  		 		product_goaldate desc
+  		 	</when>
+  		 	<when test = "product_content eq 'Most Funded'">
+  		 		 product_nowfundprice desc
+  		 	</when>
+  		 </choose>
+  		 ) 
+  		 </if>
+  		 where rnum between (#{product_num}+1) and (#{product_num}+9)
+  		
+  		</select>
+  
+	
+</mapper>
+    
