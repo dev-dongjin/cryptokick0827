@@ -5,24 +5,27 @@ public class Product {
 		private String product_name;
 		private String product_title;
 		private String product_content;
-		private String product_nowfundprice;
-		private String product_goalfundprice;
+		private int product_nowfundprice;
+		private int product_goalfundprice;
 		private String product_startdate;
 		private String product_goaldate;
-		private String product_hitcount;
+		private int product_hitcount;
 		private String product_category;
 		private String product_video;
+		private int product_price;
 		private String co_id;
 		private String product_coverImage;
+		private String product_checked;
+		private String product_location;
 		
 		public Product() {
 			// TODO Auto-generated constructor stub
 		}
 
 		public Product(int product_num, String product_name, String product_title, String product_content,
-				String product_nowfundprice, String product_goalfundprice, String product_startdate,
-				String product_goaldate, String product_hitcount, String product_category, String product_video,
-				String co_id, String product_coverImage) {
+				int product_nowfundprice, int product_goalfundprice, String product_startdate, String product_goaldate,
+				int product_hitcount, String product_category, String product_video, int product_price, String co_id,
+				String product_coverImage, String product_checked, String product_location) {
 			super();
 			this.product_num = product_num;
 			this.product_name = product_name;
@@ -35,8 +38,11 @@ public class Product {
 			this.product_hitcount = product_hitcount;
 			this.product_category = product_category;
 			this.product_video = product_video;
+			this.product_price = product_price;
 			this.co_id = co_id;
 			this.product_coverImage = product_coverImage;
+			this.product_checked = product_checked;
+			this.product_location = product_location;
 		}
 
 		public int getProduct_num() {
@@ -71,19 +77,19 @@ public class Product {
 			this.product_content = product_content;
 		}
 
-		public String getProduct_nowfundprice() {
+		public int getProduct_nowfundprice() {
 			return product_nowfundprice;
 		}
 
-		public void setProduct_nowfundprice(String product_nowfundprice) {
+		public void setProduct_nowfundprice(int product_nowfundprice) {
 			this.product_nowfundprice = product_nowfundprice;
 		}
 
-		public String getProduct_goalfundprice() {
+		public int getProduct_goalfundprice() {
 			return product_goalfundprice;
 		}
 
-		public void setProduct_goalfundprice(String product_goalfundprice) {
+		public void setProduct_goalfundprice(int product_goalfundprice) {
 			this.product_goalfundprice = product_goalfundprice;
 		}
 
@@ -103,11 +109,11 @@ public class Product {
 			this.product_goaldate = product_goaldate;
 		}
 
-		public String getProduct_hitcount() {
+		public int getProduct_hitcount() {
 			return product_hitcount;
 		}
 
-		public void setProduct_hitcount(String product_hitcount) {
+		public void setProduct_hitcount(int product_hitcount) {
 			this.product_hitcount = product_hitcount;
 		}
 
@@ -127,6 +133,14 @@ public class Product {
 			this.product_video = product_video;
 		}
 
+		public int getProduct_price() {
+			return product_price;
+		}
+
+		public void setProduct_price(int product_price) {
+			this.product_price = product_price;
+		}
+
 		public String getCo_id() {
 			return co_id;
 		}
@@ -143,6 +157,22 @@ public class Product {
 			this.product_coverImage = product_coverImage;
 		}
 
+		public String getProduct_checked() {
+			return product_checked;
+		}
+
+		public void setProduct_checked(String product_checked) {
+			this.product_checked = product_checked;
+		}
+
+		public String getProduct_location() {
+			return product_location;
+		}
+
+		public void setProduct_location(String product_location) {
+			this.product_location = product_location;
+		}
+
 		@Override
 		public String toString() {
 			return "Product [product_num=" + product_num + ", product_name=" + product_name + ", product_title="
@@ -150,8 +180,12 @@ public class Product {
 					+ product_nowfundprice + ", product_goalfundprice=" + product_goalfundprice + ", product_startdate="
 					+ product_startdate + ", product_goaldate=" + product_goaldate + ", product_hitcount="
 					+ product_hitcount + ", product_category=" + product_category + ", product_video=" + product_video
-					+ ", co_id=" + co_id + ", product_coverImage=" + product_coverImage + "]";
+					+ ", product_price=" + product_price + ", co_id=" + co_id + ", product_coverImage="
+					+ product_coverImage + ", product_checked=" + product_checked + ", product_location="
+					+ product_location + "]";
 		}
+
+		
 		
 		
 }	

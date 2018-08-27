@@ -13,7 +13,7 @@ public class WebMember{
 		private String lastname;
 		private String zipcode;
 		private String country;
-		private String state;
+		private String province;
 		private String city;
 		private String address1;
 		private String address2;
@@ -23,7 +23,7 @@ public class WebMember{
 		}
 
 		public WebMember(String userid, String firstname, String userpwd, String gender, String birthday, String phone,
-				String email, String hobby, String image, String lastname, String zipcode, String country, String state,
+				String email, String hobby, String image, String lastname, String zipcode, String country, String province,
 				String city, String address1, String address2) {
 			super();
 			this.userid = userid;
@@ -38,7 +38,7 @@ public class WebMember{
 			this.lastname = lastname;
 			this.zipcode = zipcode;
 			this.country = country;
-			this.state = state;
+			this.province = province;
 			this.city = city;
 			this.address1 = address1;
 			this.address2 = address2;
@@ -141,11 +141,11 @@ public class WebMember{
 		}
 
 		public String getState() {
-			return state;
+			return province;
 		}
 
-		public void setState(String state) {
-			this.state = state;
+		public void setState(String province) {
+			this.province = province;
 		}
 
 		public String getCity() {
@@ -177,7 +177,7 @@ public class WebMember{
 			return "WebMember [userid=" + userid + ", firstname=" + firstname + ", userpwd=" + userpwd + ", gender="
 					+ gender + ", birthday=" + birthday + ", phone=" + phone + ", email=" + email + ", hobby=" + hobby
 					+ ", image=" + image + ", lastname=" + lastname + ", zipcode=" + zipcode + ", country=" + country
-					+ ", state=" + state + ", city=" + city + ", address1=" + address1 + ", address2=" + address2 + "]";
+					+ ", province=" + province + ", city=" + city + ", address1=" + address1 + ", address2=" + address2 + "]";
 		}
 		
 }

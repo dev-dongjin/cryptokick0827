@@ -14,7 +14,7 @@ public class Company {
 		private String co_image;
 		private String co_zipcode;
 		private String co_country;
-		private String co_state;
+		private String co_province;
 		private String co_address1;
 		private String co_address2;
 		
@@ -24,7 +24,7 @@ public class Company {
 		}
 		public Company(String co_id, String co_name, String co_pwd, String co_city, String co_ceo_firstname,
 				String co_ceo_lastname, String co_phone, String co_email, String co_website, String co_image,
-				String co_zipcode, String co_country, String co_state, String co_address1, String co_address2) {
+				String co_zipcode, String co_country, String co_province, String co_address1, String co_address2) {
 			super();
 			this.co_id = co_id;
 			this.co_name = co_name;
@@ -38,7 +38,7 @@ public class Company {
 			this.co_image = co_image;
 			this.co_zipcode = co_zipcode;
 			this.co_country = co_country;
-			this.co_state = co_state;
+			this.co_province = co_province;
 			this.co_address1 = co_address1;
 			this.co_address2 = co_address2;
 		}
@@ -114,11 +114,11 @@ public class Company {
 		public void setCo_country(String co_country) {
 			this.co_country = co_country;
 		}
-		public String getCo_state() {
-			return co_state;
+		public String getCo_province() {
+			return co_province;
 		}
-		public void setCo_state(String co_state) {
-			this.co_state = co_state;
+		public void setCo_province(String co_province) {
+			this.co_province = co_province;
 		}
 		public String getCo_address1() {
 			return co_address1;
@@ -137,7 +137,7 @@ public class Company {
 			return "Company [co_id=" + co_id + ", co_name=" + co_name + ", co_pwd=" + co_pwd + ", co_city=" + co_city
 					+ ", co_ceo_firstname=" + co_ceo_firstname + ", co_ceo_lastname=" + co_ceo_lastname + ", co_phone="
 					+ co_phone + ", co_email=" + co_email + ", co_website=" + co_website + ", co_image=" + co_image
-					+ ", co_zipcode=" + co_zipcode + ", co_country=" + co_country + ", co_state=" + co_state
+					+ ", co_zipcode=" + co_zipcode + ", co_country=" + co_country + ", co_province=" + co_province
 					+ ", co_address1=" + co_address1 + ", co_address2=" + co_address2 + "]";
 		}
 		
